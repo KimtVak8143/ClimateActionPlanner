@@ -1,0 +1,43 @@
+h3 {
+    background-color: aquamarine;
+    margin: auto;
+    padding-left: 50px;
+
+}
+
+#header{
+    margin:auto; 
+    text-align: center;
+}
+
+header>p, footer>p    {
+    text-align: center;
+}
+
+#newh3  {
+    color:green;
+    margin:auto ;
+    /* align:center; */
+    text-align: center;
+}
+
+#one{
+    background-color: blueviolet;
+}
+
+
+#two{
+    font-style: italic;
+}
+
+.four {
+    font-weight: 200;
+}
+
+*{
+    background-color: antiquewhite;
+}
+
+a[href="https://www.w3schools.com/html/html_styles.asp"]{
+    color: brown;
+}
