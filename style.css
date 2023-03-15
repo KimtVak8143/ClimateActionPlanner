@@ -21,10 +21,17 @@ header>p, footer>p    {
     text-align: center;
 }
 
+#artivle    {
+    background-color:powderblue;
+}
+
+#ulnew3 {
+    font-family:verdana;
+}
+
 #one{
     background-color: blueviolet;
 }
-
 
 #two{
     font-style: italic;
