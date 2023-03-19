@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Climate Action Planner</title>
+    <link rel="stylesheet" type="text/css" href="login.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+<body ng-app="loginApp">
+	<header>
+        <div id="headp">
+            <p>Web Design & Development Mini Project</p>
+            <p>Mohit Kumar Kushwaha</p>
+        </div>
+		<nav>
+			<ul>
+				<li><a href="/homepage/index.html">Home</a></li>
+				<li><a href="/scroll/scroll.html#about">About</a></li>
+				<li><a href="/scroll/scroll.html#solutions">Solutions</a></li>
+				<li><a href="/scroll/scroll.html#impact">Impact</a></li>
+				<li><a href="/scroll/scroll.html#resources">Resources</a></li>
+				<li><a href="/scroll/scroll.html#contact">Contact Us</a></li>
+				<li><a href="/login/loginpage.html">Login</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="hero">
+			<h1>Take Action Today, Save Tomorrow</h1>
+            <img alt="cap image" src="/assets/scrollimgs.png">
+			<p></p>
+			<!-- <button title="learn-more" ="button" id="learn-more"></button> -->
+		</section>
+    
+      <h1>Login Page</h1>
+      <br>
+      <div ng-controller="loginController">
+        <form id="formcd" name="loginForm">
+          <label for="name">Name:</label>
+          <input id="name" type="text" ng-model="name" required>
+          <br><br>
+          
+          <label for="user">Username:</label>
+          <input id="user" type="text" ng-model="username" required>
+  
+          <br><br>
+  
+          <label for="pwd">Password:</label>
+          <input id="pwd" type="password" ng-model="password" required>
+  
+          <br><br>
+  
+          <button type="submit" ng-click="login()">Login</button>
+          <button type="reset" ng-click="reset()">Reset</button>
+  
+          <br><br>
+  
+          <p ng-show="loginForm.$submitted && loginForm.$invalid">Please enter all above fields.</p>
+          <p ng-show="loginError">Incorrect username or password.</p>
+        </form>
+      </div>
+        
+      <script>
+        var app = angular.module('loginApp', []);
+        app.controller('loginController', function($scope) {
+          $scope.name = '';
+          $scope.username = '';
+          $scope.password = '';
+          $scope.loginError = false;
+  
+          $scope.login = function() {
+            if($scope.username === 'admin' && $scope.password === 'password') {
+              alert('Login successful!');
+              $scope.loginForm.$setPristine();
+              $scope.loginError = false;
+              $scope.name = '';
+              $scope.username = '';
+              $scope.password = '';
+            } else {
+              $scope.loginError = true;
+            }
+          };
+  
+          $scope.reset = function() {
+            $scope.loginForm.$setPristine();
+            $scope.loginError = false;
+            $scope.name = '';
+            $scope.username = '';
+            $scope.password = '';
+          };
+        });
+        </script>
+	  </main>
+  <footer>
+      <p>Faculty: Dr Deepa Thilak</p>
+  </footer>
+	<!-- <script src="loginscript.js"></script> -->
+</body>
+</html>
