@@ -20,18 +20,15 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    margin:auto; 
-    text-align: center;
 }
-
-header>p, footer>p    {
-    text-align: center;
-}
-
 header>div   {
     text-align: center;
 }
 
+main>h1 {
+    align-items: center;
+    text-align: center;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -68,6 +65,12 @@ nav a:hover {
     text-align: center;
 }
 
+#formcd {
+    align-items: center;
+    /* align-items: center; */
+    text-align: center;
+}
+
 #hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -99,15 +102,6 @@ nav a:hover {
 main {
     padding: 5rem 0;
 }
-#header{
-    margin:auto; 
-    text-align: center;
-}
-
-header>p, footer>p    {
-    text-align: center;
-}
-
 
 section {
     margin-bottom: 5rem;
@@ -130,45 +124,4 @@ footer {
     padding: 1rem;
     text-align: center;
 }
-h3 {
-    background-color: aquamarine;
-    margin: auto;
-    padding-left: 50px;
 
-}
-
-
-#newh3  {
-    color:green;
-    margin:auto ;
-    /* align:center; */
-    text-align: center;
-}
-
-#artivle    {
-    background-color:powderblue;
-}
-
-#ulnew3 {
-    font-family:verdana;
-}
-
-#one{
-    background-color: blueviolet;
-}
-
-#two{
-    font-style: italic;
-}
-
-.four {
-    font-weight: 200;
-}
-
-*{
-    background-color: antiquewhite;
-}
-
-a[href="https://www.w3schools.com/html/html_styles.asp"]{
-    color: brown;
-}
