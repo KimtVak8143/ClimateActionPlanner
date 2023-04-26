@@ -14,7 +14,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #f7f7f7;
+    background-color: antiquewhite;
     padding: 1rem;
     position: fixed;
     top: 0;
@@ -74,8 +74,16 @@ nav a:hover {
 }
 
 #hero p {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     margin-bottom: 2rem;
+}
+
+.audiotag, .videotag  {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    
 }
 
 #hero button {
@@ -96,9 +104,7 @@ nav a:hover {
 }
 
 /* Main section styles */
-main {
-    padding: 5rem 0;
-}
+
 #header{
     margin:auto; 
     text-align: center;
@@ -113,13 +119,17 @@ section {
     margin-bottom: 5rem;
 }
 
-section h2 {
+section h2{
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
+h2  {
+    text-align: center;
+}
 section p {
     font-size: 1.2rem;
+    text-align: center;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
@@ -171,4 +181,9 @@ h3 {
 
 a[href="https://www.w3schools.com/html/html_styles.asp"]{
     color: brown;
+}
+
+.mainc  {
+    padding-left: 75px;
+    padding-right: 25px;
 }

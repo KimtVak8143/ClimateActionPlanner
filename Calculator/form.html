@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footprint Form</title>
+    <link rel="stylesheet" type="text/css" href="formstyle.css" />
+	<script>
+        const form = document.getElementById("carbonForm");
+        form.addEventListener("submit", submitForm);
+      
+        async function submitForm(event) {
+            event.preventDefault();
+        
+            // Get the form data
+            const formData = {
+                week_no: document.getElementById("week_no").value,
+                name: document.getElementById("name").value,
+                date: document.getElementById("date").value,
+                food_consumption: document.getElementById("food_consumption").value,
+                food_wastage: document.getElementById("food_wastage").value,
+                fuel_consumption: document.getElementById("fuel_consumption").value,
+                electricity_usage: document.getElementById("electricity_usage").value,
+            };
+           // Send a POST request to the server with the form data
+			const response = await fetch("/submit-form", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(formData),
+			});
+			// Redirect to the result page
+			window.location.href = "/Calculator/result.html";
+		}
+	</script>
+</head>
+<body>
+    <header>
+        <div id="headp">
+            <p>Web Design & Development Mini Project</p>
+            <!-- <p>Mohit Kumar Kushwaha</p> -->
+        </div>
+		<nav>
+			<ul>
+				<li><a href="/scroll/scroll.html">Home</a></li>
+				<!-- <li><a href="/scroll/scroll.html#about">About</a></li> -->
+				<li><a href="/scroll/scroll.html#solutions">Solutions-Impact</a></li>
+				<!-- <li><a href="/scroll/scroll.html#impact">Impact</a></li> -->
+                <li><a href="/quiz/quiz.html">Quiz</a></li>
+				<li><a href="/scroll/scroll.html#resources">Resources</a></li>
+				<li><a href="/Calculator/form.html">Calculate Footprint</a></li>
+				<li><a href="/login/loginpage.html">Login</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <main>
+        <p></p>
+        <br><br>
+    <h2>Carbon Footprint Calculator</h2>
+    <form class="formss" action="submit-form" method="post">    
+        
+        <label for="week_no">Week No:</label>
+        <input type="number" id="week_no" name="week_no" required>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <h3>Food Consumption</h3>
+        <label for="food_consumption">Food Consumption (kgs):</label>
+        <input type="number" id="food_consumption" name="food_consumption" required>
+        
+        <label for="food_wastage">Food Wastage (kgs):</label>
+        <input type="number" id="food_wastage" name="food_wastage" required>
+        
+        <h3>Transportation</h3>
+        <label for="fuel_consumption">Fuel Consumption (ltr):</label>
+        <input type="number" id="fuel_consumption" name="fuel_consumption" required>
+        
+        <h3>Energy Usage</h3>
+        <label for="electricity_usage">Electricity Usage (units):</label>
+        <input type="number" id="electricity_usage" name="electricity_usage" required>
+        
+        <button type="submit">Calculate</button>
+    </form>
+    
+    </main>
+    <footer>
+        <p>Faculty: Mr M Sivakumar</p>
+      </footer>
+</body>
+</html>
