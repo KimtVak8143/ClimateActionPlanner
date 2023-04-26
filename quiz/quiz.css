@@ -14,24 +14,21 @@ body {
 
 /* Header styles */
 header {
-    background-color: antiquewhite;
+    background-color: #f7f7f7;
     padding: 1rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    margin:auto; 
-    text-align: center;
 }
-
-header>p, footer>p    {
-    text-align: center;
-}
-
 header>div   {
     text-align: center;
 }
 
+main>h1 {
+    align-items: center;
+    text-align: center;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -68,22 +65,20 @@ nav a:hover {
     text-align: center;
 }
 
+#formcd {
+    align-items: center;
+    /* align-items: center; */
+    text-align: center;
+}
+
 #hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
 }
 
 #hero p {
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;
     margin-bottom: 2rem;
-}
-
-.audiotag, .videotag  {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    
 }
 
 #hero button {
@@ -104,32 +99,21 @@ nav a:hover {
 }
 
 /* Main section styles */
-
-#header{
-    margin:auto; 
-    text-align: center;
+main {
+    padding: 5rem 0;
 }
-
-header>p, footer>p    {
-    text-align: center;
-}
-
 
 section {
     margin-bottom: 5rem;
 }
 
-section h2{
+section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-h2  {
-    text-align: center;
-}
 section p {
     font-size: 1.2rem;
-    text-align: center;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
@@ -140,50 +124,4 @@ footer {
     padding: 1rem;
     text-align: center;
 }
-h3 {
-    background-color: aquamarine;
-    margin: auto;
-    padding-left: 50px;
 
-}
-
-
-#newh3  {
-    color:green;
-    margin:auto ;
-    /* align:center; */
-    text-align: center;
-}
-
-#artivle    {
-    background-color:powderblue;
-}
-
-#ulnew3 {
-    font-family:verdana;
-}
-
-#one{
-    background-color: blueviolet;
-}
-
-#two{
-    font-style: italic;
-}
-
-.four {
-    font-weight: 200;
-}
-
-*{
-    background-color: antiquewhite;
-}
-
-a[href="https://www.w3schools.com/html/html_styles.asp"]{
-    color: brown;
-}
-
-.mainc  {
-    padding-left: 75px;
-    padding-right: 25px;
-}

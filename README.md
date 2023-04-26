@@ -35,5 +35,3 @@ A Climate Action Planner is a web-based tool that helps individuals and organiza
     5. Database: A relational database or NoSQL database that stores user data, emissions data, and other application data.
 
     Note: In addition to the microservices architecture, the application could also incorporate cloud computing technologies to provide scalability, reliability, and cost-effectiveness. The front end could be hosted in a cloud-based web server, while the microservices could be hosted in a cloud-based container platform such as Amazon Elastic Container Service (ECS) or using AWS S3 Bucket over Amazon EC2 Instances.
-
-

@@ -1,4 +1,128 @@
 /* Global styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header, .headp {
+  /* background-color: #333; */
+  /* color: #fff; */
+  padding: 10px;
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:auto; 
+    text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  /* color: #fff; */
+  text-decoration: none;
+  padding: 5px;
+  /* border: 1px solid #fff; */
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Carbon Footprint Calculator specific styles */
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+label[for="week_no"],
+label[for="name"],
+label[for="date"],
+label[for="food_consumption"],
+label[for="food_wastage"],
+label[for="fuel_consumption"],
+label[for="electricity_usage"] {
+  font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  max-width: 300px;
+}
+
+#week_no,
+#food_consumption,
+#food_wastage,
+#fuel_consumption,
+#electricity_usage {
+  margin-right: 10px;
+}
+
+/* Global styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -74,16 +198,8 @@ nav a:hover {
 }
 
 #hero p {
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;
     margin-bottom: 2rem;
-}
-
-.audiotag, .videotag  {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    
 }
 
 #hero button {
@@ -104,7 +220,9 @@ nav a:hover {
 }
 
 /* Main section styles */
-
+main {
+    padding: 5rem 0;
+}
 #header{
     margin:auto; 
     text-align: center;
@@ -119,17 +237,13 @@ section {
     margin-bottom: 5rem;
 }
 
-section h2{
+section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-h2  {
-    text-align: center;
-}
 section p {
     font-size: 1.2rem;
-    text-align: center;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
@@ -141,7 +255,7 @@ footer {
     text-align: center;
 }
 h3 {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin: auto;
     padding-left: 50px;
 
@@ -183,7 +297,6 @@ a[href="https://www.w3schools.com/html/html_styles.asp"]{
     color: brown;
 }
 
-.mainc  {
-    padding-left: 75px;
-    padding-right: 25px;
+.formss {
+    padding-left: 25px;
 }

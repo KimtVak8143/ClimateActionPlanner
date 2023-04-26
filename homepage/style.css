@@ -4,6 +4,40 @@ h3 {
     padding-left: 50px;
 
 }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+nav a:hover {
+    color: #666;
+}
+
+header {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:auto; 
+    text-align: center;
+}
+
 
 #header{
     margin:auto; 
@@ -29,9 +63,9 @@ header>p, footer>p    {
     font-family:verdana;
 }
 
-#one{
-    background-color: blueviolet;
-}
+/* #one{
+    /* background-color: blueviolet; */
+/* } */ 
 
 #two{
     font-style: italic;
