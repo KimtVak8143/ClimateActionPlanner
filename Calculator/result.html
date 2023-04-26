@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator Results</title>
+
+  </head>
+  <body>
+    <h1>Carbon Footprint Calculator Results</h1>
+    <h2>Form Data:</h2>
+    <ul>
+      <li><strong>Week No:</strong> <span id="weekNo"></span></li>
+      <li><strong>Name:</strong> <span id="name"></span></li>
+      <li><strong>Date:</strong> <span id="date"></span></li>
+      <li><strong>Food Consumption:</strong> <span id="foodConsumption"></span> kgs</li>
+      <li><strong>Food Wastage:</strong> <span id="foodWastage"></span> kgs</li>
+      <li><strong>Fuel Consumption:</strong> <span id="fuelConsumption"></span> ltr</li>
+      <li><strong>Electricity Usage:</strong> <span id="electricityUsage"></span> units</li>
+    </ul>
+
+    <h2>Carbon Footprint Calculation:</h2>
+    <p>
+      Your estimated carbon footprint for this week is <strong id="carbonFootprint"></strong> kg CO2e.
+    </p>
+
+    <script>
+      // Fetch the carbon footprint calculation results from the server using a GET request
+      fetch('/form-data')
+        .then(response => response.text())
+        .then(data => {
+            const formData= JSON.parse(data);
+          // Set the form data values in the HTML document
+          document.getElementById('weekNo').textContent = data.weekNo;
+          document.getElementById('name').textContent = data.name;
+          document.getElementById('date').textContent = data.date;
+          document.getElementById('foodConsumption').textContent = data.foodConsumption;
+          document.getElementById('foodWastage').textContent = data.foodWastage;
+          document.getElementById('fuelConsumption').textContent = data.fuelConsumption;
+          document.getElementById('electricityUsage').textContent = data.electricityUsage;
+
+          // Set the carbon footprint calculation result in the HTML document
+          document.getElementById('carbonFootprint').textContent = data.carbonFootprint.toFixed(2);
+        })
+        .catch(error => console.error('Error fetching carbon footprint calculation results:', error));
+    </script>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Carbon Footprint Results</title>
+  </head>
+  <body>
+    <h1>Carbon Footprint Results</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Week No</th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Food Consumption (kgs)</th>
+          <th>Food Wastage (kgs)</th>
+          <th>Fuel Consumption (ltr)</th>
+          <th>Electricity Usage (units)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+          <td>{{this.week_no}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.date}}</td>
+          <td>{{this.food_consumption}}</td>
+          <td>{{this.food_wastage}}</td>
+          <td>{{this.fuel_consumption}}</td>
+          <td>{{this.electricity_usage}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html> -->
