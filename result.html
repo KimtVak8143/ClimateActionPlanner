@@ -5,44 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Footprint Calculator Results</title>
-    <link rel="stylesheet" type="text/css" href="formstyle.css" />
+
   </head>
   <body>
-    <header>
-      <div id="headp">
-          <p>Web Design & Development Mini Project</p>
-          <!-- <p>Mohit Kumar Kushwaha</p> -->
-      </div>
-  <nav>
-    <ul>
-      <li><a href="/scroll/scroll.html">Home</a></li>
-      <!-- <li><a href="/scroll/scroll.html#about">About</a></li> -->
-      <li><a href="/scroll/scroll.html#solutions">Solutions-Impact</a></li>
-      <!-- <li><a href="/scroll/scroll.html#impact">Impact</a></li> -->
-              <li><a href="/quiz/quiz.html">Quiz</a></li>
-      <li><a href="/scroll/scroll.html#resources">Resources</a></li>
-      <li><a href="/Calculator/form.html">Calculate Footprint</a></li>
-      <li><a href="/login/loginpage.html">Login</a></li>
-    </ul>
-  </nav>
-</header>
-    <br><br><br><br>
     <h1>Carbon Footprint Calculator Results</h1>
     <h2>Form Data:</h2>
     <ul>
-      <li><strong>Week No:</strong> <span id="weekNo"></span></li><br>
-      <li><strong>Name:</strong> <span id="name"></span></li><br>
-      <li><strong>Date:</strong> <span id="date"></span></li><br>
-      <li><strong>Food Consumption:</strong> <span id="foodConsumption"></span> kgs</li><br>
-      <li><strong>Food Wastage:</strong> <span id="foodWastage"></span> kgs</li><br>
-      <li><strong>Fuel Consumption:</strong> <span id="fuelConsumption"></span> ltr</li><br>
-      <li><strong>Electricity Usage:</strong> <span id="electricityUsage"></span> units</li><br>
+      <li><strong>Week No:</strong> <span id="weekNo"></span></li>
+      <li><strong>Name:</strong> <span id="name"></span></li>
+      <li><strong>Date:</strong> <span id="date"></span></li>
+      <li><strong>Food Consumption:</strong> <span id="foodConsumption"></span> kgs</li>
+      <li><strong>Food Wastage:</strong> <span id="foodWastage"></span> kgs</li>
+      <li><strong>Fuel Consumption:</strong> <span id="fuelConsumption"></span> ltr</li>
+      <li><strong>Electricity Usage:</strong> <span id="electricityUsage"></span> units</li>
     </ul>
 
     <h2>Carbon Footprint Calculation:</h2>
-    <h3>
+    <p>
       Your estimated carbon footprint for this week is <strong id="carbonFootprint"></strong> kg CO2e.
-    </h3>
+    </p>
 
     <script>
       // Fetch the carbon footprint calculation results from the server using a GET request
