@@ -24,13 +24,13 @@
                 electricity_usage: document.getElementById("electricity_usage").value,
             };
            // Send a POST request to the server with the form data
-			const response = await fetch("/submit-form", {
+			const response = await fetch("Calculator/form.html", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(formData),
 			});
 			// Redirect to the result page
-			window.location.href = "/Calculator/result.html";
+			window.location.href = "/result.html";
 		}
 	</script>
 </head>
@@ -58,7 +58,7 @@
         <p></p>
         <br><br>
     <h2>Carbon Footprint Calculator</h2>
-    <form class="formss" action="submit-form" method="post">    
+    <form id="carbonForm" class="formss" action="/result.html" method="post">    
         
         <label for="week_no">Week No:</label>
         <input type="number" id="week_no" name="week_no" required>

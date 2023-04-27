@@ -1,4 +1,3 @@
-// const mongo
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -39,11 +38,11 @@ app.use(express.static(path.join(__dirname, '/Calculator')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/submit-form', (req, res) => {
-    res.render('Calculator/form.html');
+app.get('/form.html', (req, res) => {
+    res.render('/form.html');
   });
 
-app.post('/submit-form', (req, res) => {
+app.post('/form.html', (req, res) => {
 	const carbon = new Carbon({
 		week_no: req.body.week_no,
 		name: req.body.name,
@@ -56,7 +55,7 @@ app.post('/submit-form', (req, res) => {
 	// Save form data to database
 	carbon.save()
     .then(() => {
-      res.redirect('/Calculator/result.html');
+      res.redirect('/result.html');
     })
     .catch(err => console.log(err));
 });
@@ -65,7 +64,7 @@ app.post('/submit-form', (req, res) => {
 app.get('/form-data', async(req, res) => {
 	try	{
 		const data = await Carbon.find({});
-		res.render('Calculator/result.html', { carbonData: data });
+		res.render('/result.html', { carbonData: data });
 	}
 	catch(err)
 	{
